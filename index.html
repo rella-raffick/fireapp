@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cognito Authentication</title>
+
+    <!-- User should not be able to go back to the Form, so disabling the user to go back -->
+    <script type = "text/javascript" >  
+        history.pushState(null, null, location.href);
+        window.onpopstate = function () {
+            history.go(1);
+        };
+    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body {
+            background-color: #6a9ac4; 
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        #btn {
+            background-color: #1f2e43;
+            filter: drop-shadow(2px 2px 3px #0003);
+            color: #fff;
+            font-family: "Poppins",sans-serif;
+            font-size: clamp(16px, 1.6vw, 18px);
+            display: block;
+            padding: 18px 30px;
+            margin: 2px auto;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            user-select: none;
+            transition: 0.2s;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="position: fixed;top: 10px;left: 30px;font-size: 45px;">🔥</h1>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-6" style="display: block; margin: 150px auto; text-align: center;">
+                <h1 style="font-size: 60px;">Think. Speak. Listen.</h1>
+                <br/>
+                <p style="font-size: 25px;">Raise your words, not your voice. <br/>It is rain that grows flowers, not thunder.</p>
+                <br/>
+                <a id="btn" href="https://fireapp.auth.us-east-1.amazoncognito.com/login?client_id=21735otj3k64vaigla0rds0a6p&response_type=token&scope=aws.cognito.signin.user.admin+email+openid+phone+profile&redirect_uri=https%3A%2F%2Fmaster.d32zbpn22uy54o.amplifyapp.com%2Fget-in-touch.html">Let's Go!</a>
+            </div>
+            <div class="col-sm-6">
+                <img style="width: 100%; height: 600px;" src="https://freelancers-hub.com/wp-content/uploads/2020/02/How-we-set-our-Ecommerce-Search-Engine-Optimization-Pricing-1024x1024.png"/>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
